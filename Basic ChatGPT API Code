@@ -1,0 +1,11 @@
+import os
+import openai
+from dotenv import load_dotenv
+
+#Set your OpenAI API Key
+load_dotenv()
+openai.api_key = os.getenv("OPENAI_API_TOKEN")
+
+#Change the 'content' string to get differet respone from ChatGPT.
+completion = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=[{"role": "user", "content": "Give me a brief introduction to ChatGPT"}])
+print(completion.choices[0].message.content)
