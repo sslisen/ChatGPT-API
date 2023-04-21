@@ -19,7 +19,7 @@ def CustomChatGPT(user_input):
     messages.append({"role": "assistant", "content": ChatGPT_reply})
     return ChatGPT_reply
 
-demo = gradio.Interface(fn=CustomChatGPT, inputs = "text", outputs = "text", title = "Ashes's Digital Assitant")
+user_gui = gradio.Interface(fn=CustomChatGPT, inputs = "text", outputs = "text", title = "Ashes's Digital Assitant")
 
-demo.launch()
-#demo.launch(share=True)
+user_gui.launch()
+#user_gui.launch(share=True)
